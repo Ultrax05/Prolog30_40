@@ -32,7 +32,7 @@
 % -------- Código en Prolog --------------------
 main :-
     write('Arbol: nodo(nodo(a, [nodo(b, []), nodo(c, [nodo(d, [])])]))|'),
-    (es_arbol_multiway(nodo(a, [nodo(b, []), nodo(c, [nodo(d, [])])]))) -> write('Es multiway'); write('No es multiway')),nl.
+    (es_arbol_multiway(nodo(a, [nodo(b, []), nodo(c, [nodo(d, [])])])) -> write('Es multiway'); write('No es multiway')),nl.
 % Un nodo vacío no es un arbol multiway.
 es_arbol_multiway(nil) :- !, fail.
 
