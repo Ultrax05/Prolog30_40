@@ -39,7 +39,7 @@
 %print("El arbol tiene ",contar_hojas(arbol)," hojas.")
 % -------- Código en Prolog --------------------
 main :-
-    contar_hojas(arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)), TotalHojas).
+    contar_hojas(arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)), TotalHojas),
     write('Arbol: a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)| Total: '), write(TotalHojas), nl.
 % Un arbol vacío tiene 0 hojas.
 contar_hojas(nil, 0).
