@@ -49,7 +49,7 @@
 %print("Los nodos en el nivel ", nivel_deseado, " son: ", colectar_nodos_en_nivel(arbol, nivel_deseado))
 % -------- Código en Prolog --------------------
 main :-
-    ?- nodos_en_nivel(arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)), 1, Nodos),
+    nodos_en_nivel(arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)), 1, Nodos),
     write('Arbol: arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil))| En nivel 1| Nodos: '), write(Nodos), nl.
 % Un arbol vacio no tiene nodos.
 nodos_en_nivel(nil, _, []).
