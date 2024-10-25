@@ -51,14 +51,16 @@
 %else:
 %    print("El árbol no es simétrico")
 % -------- Código en Prolog --------------------
+% Punto de entrada principal.
 main :-
     write('Res: '), arbol_simetrico(arbol(x, arbol(y, nil, nil), arbol(y, nil, nil))), nl.
-% Comprobar si un arbol es simetrico.
+
+% Comprobar si un árbol es simétrico.
 arbol_simetrico(nil).  % Un árbol vacío es simétrico.
 arbol_simetrico(arbol(_, Izquierdo, Derecho)) :-
     espejo(Izquierdo, Derecho).
 
-% Comprobar si dos arboles son espejos entre sí.
+% Comprobar si dos árboles son espejos entre sí.
 espejo(nil, nil).  % Dos árboles vacíos son espejos entre sí.
 espejo(arbol(_, I1, D1), arbol(_, I2, D2)) :-
     espejo(I1, D2),  % El subárbol izquierdo de uno debe ser el espejo del subárbol derecho del otro.
