@@ -49,7 +49,7 @@
 %print("Las hojas del árbol son: ", reunir_hojas(arbol))
 % -------- Código en Prolog --------------------
 main :-
-    reunir_hojas(arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)), Hojas).
+    reunir_hojas(arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil)), Hojas),
     write('Arbol: arbol(a, arbol(b, nil, nil), arbol(c, arbol(d, nil, nil), nil))| Hojas: '), write(Hojas), nl.
 % Un arbol vacio tiene una lista de hojas vacia.
 reunir_hojas(nil, []).
