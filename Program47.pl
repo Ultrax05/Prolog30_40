@@ -53,7 +53,9 @@
 % -------- Código en Prolog --------------------
 % Punto de entrada principal.
 main :-
-    write('Res: '), arbol_simetrico(arbol(x, arbol(y, nil, nil), arbol(y, nil, nil))), nl.
+    write('arbol(x, arbol(y, nil, nil), arbol(y, nil, nil)): '),
+    arbol_simetrico(arbol(x, arbol(y, nil, nil), arbol(y, nil, nil))) -> write('Es simetrico'); write('No es simetrico'))
+     , nl.
 
 % Comprobar si un árbol es simétrico.
 arbol_simetrico(nil).  % Un árbol vacío es simétrico.
